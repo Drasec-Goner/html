@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#main
+{
+    min-height: 100vh;
+    position: relative;
+}
+
+.block{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.b1
+{
+    background-color: red;
+}
+
+.b2{
+    background-color: yellow;
+}
+.trans{
+    height: 100vh;
+    width: 100vw;
+}
+.float-text{
+    position: absolute;
+    background-color: transparent;
+    z-index: 0;
+}

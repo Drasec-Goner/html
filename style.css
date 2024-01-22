@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nig
+{
+    width: 20vw;
+    height: 20vh;
+    background-color: yellow;
+    
+}
+
+span{
+    color: red;
+}
+
+table{
+    border-collapse: collapse;
+    padding: 20px;
+}
+tr td {
+  border: 2px solid black;
+   
+}

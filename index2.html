@@ -1,0 +1,67 @@
+<!-- FILEPATH: /c:/Users/HP/OneDrive - Lovely Professional University/Desktop/html/index2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div>
+        <h2>Don't have an account?! Want to join us?!</h2>
+        <form>
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input name="firstname" type="text" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input name="lastname" type="text" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="Others">Others
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select City</td>
+                    <td>
+                        <select name="cities">
+                            <option value="-Select City-">-Select City-</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Jalandhar">Jalandhar</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="address" rows="2" cols="30" placeholder="Address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td>Select File</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="check" value="">I agree to the Terms and Conditions.</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit">
+                    <input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
