@@ -1,0 +1,37 @@
+.box {
+    margin: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(20);
+    border-style: solid;
+    background-color: 0;
+    /* border-width: 0 0 200px 200px; */
+    border-color: green black green black;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.band{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+    background-color: grey;
+    height: 200px;
+    width: 70px;
+    border-radius: 40%;
+    padding: 20px;
+    border: 2px solid;
+}
+
+.design{
+    border: 2px solid black;
+}
+
+.box:hover {
+    border-color: red black red black;
+}
