@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var img =null;
+        function init() {
+            img = document.getElementById('myimg');
+            img.style.position = 'relative';
+
+            img.style.left = '50px';
+        }
+        function moveRight()
+        {
+            img.style.left = parseInt(img.style.left) + 100 + 'px';
+        }
+        function moveLeft()
+        {
+            img.style.right = parseInt(img.style.right) = 100 + 'px';
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <form>
+        <img src="train1.png" id="myimg" />
+        <center>
+            <p>Click the below button to move the image right</p>
+            <input type="button" value="Click Me" onclick="moveRight()" />
+            <p>Click the below button to move the image left</p>
+            <input type="button" value="Click Me" onclick="moveLeft()" />
+        </center>
+        <a href="" tagr></a>
+    </form>
+</body>
+</html>
