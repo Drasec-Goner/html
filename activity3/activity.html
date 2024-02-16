@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Emissary Challenge</title>
+</head>
+<body>
+    <h1>Welcome to the Error Emissary Challenge!</h1>
+    <p>Following Errors in the code:</p>
+    <script>
+        try {
+            // Syntax Error: Unexpected token
+            let x = 5;
+            console.log(x)
+            console.log(y);
+        } catch (error) {
+            document.write("<p>Syntax Error: " + error.message + "</p>");
+        }
+
+        try {
+            // Reference Error: Variable not defined
+            console.log(nonExistentVariable);
+        } catch (error) {
+            document.write("<p>Reference Error: " + error.message + "</p>");
+        }
+
+        try {
+            // Type Error: Trying to access property of undefined
+            let obj = null;
+            console.log(obj.property);
+        } catch (error) {
+            document.write("<p>Type Error: " + error.message + "</p>");
+        }
+
+        try {
+            // Range Error: Maximum call stack size exceeded
+            function recursiveFunction() {
+                recursiveFunction();
+            }
+            recursiveFunction();
+        } catch (error) {
+            document.write("<p>Range Error: " + error.message + "</p>");
+        }
+
+        try {
+            // Error due to invalid input format
+            let userInput = prompt("Enter your name:");
+            if (userInput.length < 3) {
+                throw new Error("Name must be at least 3 characters long");
+            }
+            console.log("Hello, " + userInput);
+        } catch (error) {
+            document.write("<p>User Input Error: " + error.message + "</p>");
+        }
+    </script>
+</body>
+</html>
