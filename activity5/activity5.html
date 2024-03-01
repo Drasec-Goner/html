@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 20px;
+        }
+        
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        .full-image-container {
+            width: 700px;
+            height: 700px;
+            overflow: auto;
+            margin: 0 auto;
+        }
+        
+        .full-image {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="thumbnail-container">
+        <img class="thumbnail" src="thumbnail1.jpg" alt="Thumbnail 1">
+        <img class="thumbnail" src="thumbnail2.jpg" alt="Thumbnail 2">
+        <img class="thumbnail" src="thumbnail3.jpg" alt="Thumbnail 3">
+    </div>
+    
+    <div class="full-image-container">
+        <img class="full-image" src="" alt="Full-size Image">
+    </div>
+    
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const fullImage = document.querySelector('.full-image');
+        const fullImageContainer = document.querySelector('.full-image-container');
+            
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                const thumbnailSrc = thumbnail.getAttribute('src');
+                fullImage.setAttribute('src', thumbnailSrc);
+                fullImage.style.display = 'block';
+
+                fullImageContainer.scrollTop = fullImageContainer.scrollHeight;
+                fullImageContainer.scrollLeft = fullImageContainer.scrollWidth;
+            });
+        });
+    </script>
+</body>
+</html>

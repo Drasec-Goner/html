@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        .image-tab {
+            display: inline-block;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+        .image-tab:hover {
+            border: 2px solid red;
+        }
+        .main-image {
+            width: 500px;
+            height: 540px;
+            cursor: pointer;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-tab img {
+            width: 90px;
+            height: 90px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-gallery">
+        <img class="main-image" src="images/pexels-monayem-billah-20161587.jpg" alt="Main Image" onclick="changeToNextImage()">
+        <div class="image-container">
+            <div class="image-tab" onclick="changeImageOnClick('images/pexels-monayem-billah-20161587.jpg')">
+                <img src="images/pexels-monayem-billah-20161587.jpg" alt="Image 1">
+            </div>
+            <div class="image-tab" onclick="changeImageOnClick('images/pexels-natalia-yamboglo-15868390.jpg')">
+                <img src="images/pexels-natalia-yamboglo-15868390.jpg" alt="Image 1">
+            </div>
+            <div class="image-tab" onclick="changeImageOnClick('images/pexels-photo-18118946.jpeg')">
+                <img src="images/pexels-photo-18118946.jpeg" alt="Image 2">
+            </div>
+            <div class="image-tab" onclick="changeImageOnClick('images/pexels-skyler-ewing-4672324.jpg')">
+                <img src="images/pexels-skyler-ewing-4672324.jpg" alt="Image 3">
+            </div>
+            <div class="image-tab" onclick="changeImageOnClick('images/pexels-victoria-boiko-19338186.jpg')">
+                <img src="images/pexels-victoria-boiko-19338186.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var images = [
+            'images/pexels-monayem-billah-20161587.jpg',
+            'images/pexels-natalia-yamboglo-15868390.jpg',
+            'images/pexels-photo-18118946.jpeg',
+            'images/pexels-skyler-ewing-4672324.jpg',
+            'images/pexels-victoria-boiko-19338186.jpg'
+        ];
+        var currentIndex = 0;
+
+        function changeImageOnClick(imageUrl) {
+            var mainImage = document.querySelector('.main-image');
+            mainImage.src = imageUrl;
+        }
+
+        function changeToNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            var mainImage = document.querySelector('.main-image');
+            mainImage.src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

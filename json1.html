@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let text='{"employees":[' +'{"firstName":"John","lastName":"Doe"},'+'{"firstName":"Anna","lastName":"Smith"},'+'{"firstName":"Peter","lastName":"Johnes"}'+']}';
+        const obj=JSON.parse(text);
+        let output = "";
+        for (let i = 0; i < obj.employees.length; i++) {
+            output += obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>";
+        }
+        document.getElementById("demo").innerHTML = output;
+    </script>
+</body>
+</html>

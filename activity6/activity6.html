@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Junction</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="title">Original Title</h1>
+    <p id="content">Original Content</p>
+    <button id="updatetitle">Update Title</button>
+    <button id="updatecontent">Update Content</button>
+
+    <script>
+        $(document).ready(function() {
+            var data = {
+                "title": "New Title",
+                "content": "New Content"
+            };
+            $("#updatetitle").click(function() {
+                $("#title").text(data.title);
+                $("#title").css("color", "red");
+            });
+            $("#updatecontent").click(function() {
+                $("#content").text(data.content);
+                $("#content").css("color", "blue");
+                $("#content").css("font-size", "33px");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Selector Example</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello, World!</h1>
+        <p>This is a paragraph.</p>
+        <p class="highlight">This is another paragraph.</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Using querySelector to select a single element
+        const heading = document.querySelector('h1');
+        console.log(heading.textContent); // Output: Hello, World!
+
+        let nodeList = document.querySelectorAll("p");
+        for (let i = 0; i < nodeList.length; i++) {
+            nodeList[i].style.backgroundColor = "red";
+        }
+
+        // Using querySelectorAll to select multiple elements
+        const paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(paragraph => {
+            console.log(paragraph.textContent);
+        });
+        // Output:
+        // This is a paragraph.
+        // This is another paragraph.
+
+        const highlightedParagraph = document.querySelector('.highlight');
+        console.log(highlightedParagraph.textContent); // Output: This is another paragraph.
+    </script>
+</body>
+</html>
