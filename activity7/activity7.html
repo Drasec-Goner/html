@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Object Example</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const participants = {
+      "person": [
+        {
+          "name": "Soumya",
+          "age": 20,
+          "address": {
+            "city": "Kolkata",
+            "state": "West Bengal"
+          },
+          "contact": {
+            "email": "soumya@gmail.com",
+            "phone": "9123456789"
+          }
+        },
+        {
+          "name": "Shubham",
+          "age": 20,
+          "address": {
+            "city": "Delhi",
+            "state": "Delhi"
+          },
+          "contact": {
+            "email": "shubham@gmail.com",
+            "phone": "0987654321"
+          }
+        }
+      ]
+    };
+
+    const jsonString = JSON.stringify(participants);
+
+    document.getElementById("output").textContent = jsonString;
+
+    const participantsObject = JSON.parse(jsonString);
+    
+    console.log(participantsObject);
+  </script>
+</body>
+</html>
